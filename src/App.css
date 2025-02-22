@@ -1,0 +1,134 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+nav {
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999; 
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  background: rgba(255, 255, 255, 0.9); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 4;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: fadeInUp 2s ease-out forwards;
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 3s ease-out forwards;
+
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-button .btn-primary {
+  padding: 1rem 4rem; 
+  font-size: 1.45rem; 
+  width: 250px; 
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  border-radius: 1.375rem;
+  text-decoration: none;
+  animation: fadeInUp 12s ease-out forwards;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button .btn-primary:hover {
+  background-color: white;
+  color: black;
+}
+.signup{
+  width: 150px; 
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  border-radius: 1.375rem;
+  text-decoration: none;
+}
+.signup:hover{
+  background-color: white;
+  color: black;
+}
+.signin{
+  color: #000;
+  font-size:larger;
+  padding: 10px 20px;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+header {
+  top: 0;
+  left: 0;
+  transition-duration: .3s;
+  margin: 0 -78px;
+  width: calc(100% + 156px);
+  z-index: 8888;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1),0 0 40px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+} 
